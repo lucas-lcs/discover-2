@@ -88,16 +88,18 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-back 0.2s;
 }
 
-#switch button:hover {
-  border-radius: 9999px;
-  -webkit-box-shadow: 0px 2px 8px 8px var(--highlight-color);
-}
 
 .light #switch button {
-  left: initial;
-  right: 0;
+  /* left: initial;
+  right: 0; */
+  animation: slide-in 0.2s forwards ;
+}
+#switch button:hover {
+  -webkit-box-shadow: 0px 2px 8px 8px var(--highlight-color); 
+  /* outline: 8px solid var(--highlight-color); */
 }
 
 #switch span {
@@ -176,5 +178,24 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }

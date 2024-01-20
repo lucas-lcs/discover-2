@@ -33,6 +33,7 @@ body {
   /* Agrupando todos os valores na order abaixo para simplificar a escrita:
 background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -91,15 +92,14 @@ body * {
   animation: slide-back 0.2s;
 }
 
-
 .light #switch button {
   /* left: initial;
   right: 0; */
-  animation: slide-in 0.2s forwards ;
+  animation: slide-in 0.2s forwards;
 }
 #switch button:hover {
-  -webkit-box-shadow: 0px 2px 8px 8px var(--highlight-color); 
-  /* outline: 8px solid var(--highlight-color); */
+  /* -webkit-box-shadow: 0px 2px 8px 8px var(--highlight-color); */
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
